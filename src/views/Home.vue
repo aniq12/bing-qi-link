@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1 class="text-primary text-center">
-      <strong><i class="fas fa-ice-cream"></i> Bing Qi Link</strong>
+      <strong><i class="fas fa-ice-cream"></i>Lorem, ipsum.</strong>
     </h1>
     <h4 class="text-center"><strong>URL Shortener</strong></h4>
     <div class="container" id="con1">
@@ -49,7 +49,7 @@
                       <div class="col-md-6 py-2">
                         <span class="text-black" id="copy"
                           ><i
-                            >https://bql.co.vu/key/{{ hashed }}</i
+                            >https://shorten.aniqq.xyz/key/{{ hashed }}</i
                           ></span
                         >
                       </div>
@@ -77,7 +77,8 @@
           </form>
 
           <p class="mt-1">
-            Bing Qi Link is a free tool to shorten a URL or reduce a link <br />
+            Lorem, ipsum. is a free tool to shorten a URL or reduce a link
+            <br />
             Use our URL Shortener to create a shortened link making it easy to
             remember
           </p>

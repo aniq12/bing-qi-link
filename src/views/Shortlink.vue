@@ -1,53 +1,28 @@
 <template>
   <div>
     <div class="container" style="max-width: 650px">
-      <div class="card mt-4" id="card1">
-        <div class="card-body">
-          <div class="row text-center mt-5 mb-5">
-            <div class="col-md-12" v-if="!notFound && destinationLink">
-              <p v-if="countdown" style="font-size: 18px">
-                <i>Please wait until the link is ready...</i>
-              </p>
-              <div
-                v-if="countdown"
-                id="circle"
-                class="container rounded-circle"
-              >
-                <h1 id="countdown" class="mt-5">
-                  {{ countdown }}
-                </h1>
-              </div>
-              <h3 v-if="!countdown">This link is ready</h3>
-              <button
-                id="btn-gotolink"
-                class="btn btn-lg btn-primary mt-3"
-                @click="goToLink"
-                :class="{ disabled: countdown }"
-              >
-                Continue to Site
-              </button>
-            </div>
-            <div class="col-md-12 text-center">
-              <div v-if="notFound">
-                <img
-                  src="https://www.svgrepo.com/show/338120/sad-emoji-emoticon.svg"
-                  class="mb-3"
-                />
-                <br />
-                <code>http://localhost:8080/key/{{ hash }}</code>
-                <hr />
-                <h5>
-                  Maybe this link moved? Got deleted? <br />
-                  Is hiding out in quarantine? <br />
-                  Never existed in the first place? <br />
-                  <br />
-                  Let's go home and try from there.
-                </h5>
-                <router-link to="/" id="btn-returnhome" class="btn btn-primary"
-                  >Return to Home</router-link
-                >
-              </div>
-            </div>
+      <div class="row text-center mt-5 mb-5">
+        <div class="col-md-12" v-if="!notFound && destinationLink"></div>
+        <div v-bind:href="goToLink()"></div>
+        <div class="col-md-12 text-center">
+          <div v-if="notFound">
+            <img
+              src="https://www.svgrepo.com/show/338120/sad-emoji-emoticon.svg"
+              class="mb-3"
+            />
+            <br />
+            <code>http://localhost:8080/key/{{ hash }}</code>
+            <hr />
+            <h5>
+              Maybe this link moved? Got deleted? <br />
+              Is hiding out in quarantine? <br />
+              Never existed in the first place? <br />
+              <br />
+              Let's go home and try from there.
+            </h5>
+            <router-link to="/" id="btn-returnhome" class="btn btn-primary"
+              >Return to Home</router-link
+            >
           </div>
         </div>
       </div>
